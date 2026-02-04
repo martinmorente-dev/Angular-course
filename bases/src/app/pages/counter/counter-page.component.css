@@ -1,0 +1,22 @@
+h1
+{
+  padding: 10px;
+}
+
+button
+{
+  margin: 10px;
+  width: 100px;
+  height: 40px;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  transition: transform ease-in-out 0.5s;
+  cursor: pointer;
+}
+
+button:hover
+{
+  transform: scale(0.9);
+}

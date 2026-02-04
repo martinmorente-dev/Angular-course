@@ -1,0 +1,28 @@
+ <h3>{{ listName() }}</h3>
+
+    <ul>
+      @for (character of characters(); track character.id; let idx = $index)
+      {
+        @if(character.power > 500)
+        {
+          <li>
+            <span>{{idx + 1}} </span>
+            <span>{{character.name}}</span>
+            <strong
+            [class.text-danger]="character.power > 9000" class="text-danger"
+            [class.text-primary]="character.power < 9000">
+              {{character.power}}
+            </strong>
+          </li>
+        }
+        @else
+        {
+          <li><strong>Aqui no hay nada que ver</strong></li>
+        }
+      }
+      <!--Renderiza x contenido si la lista que se intenta renderizar no tiene datos-->
+      @empty
+      {
+        <p>There is no data :(</p>
+      }
+    </ul>

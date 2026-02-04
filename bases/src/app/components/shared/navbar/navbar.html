@@ -1,0 +1,69 @@
+<style>
+  nav
+  {
+    display: flex;
+    justify-content: space-around;
+    background-color: #212121;
+    color: white;
+    padding: 10px;
+  }
+  .link
+  {
+    display: flex;
+    flex-direction: column;
+
+    .line
+    {
+      width: 0;
+      height: 2px;
+      background-color: aqua;
+      transition: width 0.5s ease-in-out;
+    }
+  }
+  .link:hover
+  {
+    .line
+    {
+      width: 100%;
+    }
+  }
+
+  a
+  {
+    color: white;
+    text-decoration: none;
+  }
+
+  .active
+  {
+    color: rgb(101, 101, 255);
+  }
+
+
+</style>
+
+<nav>
+
+  <div class="link">
+    <a routerLink="/" routerLinkActive="active"
+    [routerLinkActiveOptions]="{exact: true}">Contador</a>
+    <span class="line"></span>
+  </div>
+
+  <div class="link">
+    <a routerLink="/hero" routerLinkActive="active">Hero</a>
+    <span class="line"></span>
+  </div>
+
+  <div class="link">
+    <a routerLink="/dragon-ball" routerLinkActive="active">Dragon Ball</a>
+    <span class="line"></span>
+  </div>
+
+  <div class="link">
+    <a routerLink="/dragon-ball-super" routerLinkActive="active">Dragon Ball Super</a>
+    <span class="line"></span>
+  </div>
+
+  <!--Otros-->
+</nav>
